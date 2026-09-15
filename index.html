@@ -349,38 +349,39 @@ nav {
 /* ================================================
    HOTEL PORTAL
 ================================================ */
-.hotel-portal { background: var(--night-mid); padding: 6rem 0; }
+.hotel-portal { background: var(--smoke); padding: 6rem 0; }
 .portal-desc {
-  color: rgba(255,255,255,0.62); max-width: 58ch;
+  color: var(--muted); max-width: 58ch;
   line-height: 1.8; margin-bottom: 3rem;
 }
 
 .portal-gate {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--gold-border); padding: 2.5rem;
+  background: var(--white);
+  border: 1px solid var(--line); padding: 2.5rem;
   max-width: 520px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 .gate-head { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.75rem; }
 .gate-icon { font-size: 1.9rem; flex-shrink: 0; }
-.gate-title { font-family: var(--serif); font-size: 1.18rem; color: var(--white); }
-.gate-sub { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-top: 0.2rem; }
+.gate-title { font-family: var(--serif); font-size: 1.18rem; color: var(--night); }
+.gate-sub { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
 
 .form-label {
   display: block; font-size: 0.72rem; font-weight: 700;
-  color: rgba(255,255,255,0.55); letter-spacing: 0.1em;
-  margin-bottom: 0.4rem;
+  color: var(--night); letter-spacing: 0.1em;
+  margin-bottom: 0.4rem; text-transform: uppercase;
 }
 .form-input {
-  width: 100%; background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.14); color: var(--white);
+  width: 100%; background: var(--smoke);
+  border: 1px solid var(--line); color: var(--night);
   padding: 0.75rem 1rem; font-family: var(--sans);
   font-size: 0.9rem; outline: none; transition: border-color 0.2s;
   margin-bottom: 1rem;
 }
-.form-input:focus { border-color: var(--gold); }
-.form-input::placeholder { color: rgba(255,255,255,0.28); }
+.form-input:focus { border-color: var(--gold); background: var(--white); }
+.form-input::placeholder { color: #9CA3AF; }
 .form-error {
-  color: #FCA5A5; font-size: 0.8rem;
+  color: #DC2626; font-size: 0.8rem;
   margin-bottom: 0.75rem; display: none;
 }
 .btn-verify {
@@ -395,9 +396,9 @@ nav {
 .hotel-results.show { display: block; }
 .verified-banner {
   display: flex; align-items: center; gap: 0.75rem;
-  font-size: 0.82rem; color: var(--leaf-light);
-  background: rgba(45,106,79,0.18);
-  border: 1px solid rgba(45,106,79,0.4);
+  font-size: 0.82rem; color: var(--leaf);
+  background: rgba(45,106,79,0.08);
+  border: 1px solid rgba(45,106,79,0.25);
   padding: 0.85rem 1.25rem; margin-bottom: 2rem;
 }
 .hotels-grid {
@@ -405,7 +406,10 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 1.5rem;
 }
-.hotel-card { background: var(--white); padding: 1.75rem; }
+.hotel-card { 
+  background: var(--white); padding: 1.75rem; 
+  border: 1px solid var(--line);
+}
 .hotel-name {
   font-family: var(--serif); font-size: 1.2rem;
   font-weight: 600; color: var(--night); margin-bottom: 0.25rem;
@@ -419,17 +423,17 @@ nav {
 .rate-type { font-size: 0.8rem; color: var(--muted); }
 .rate-old { text-decoration: line-through; font-size: 0.76rem; color: #9CA3AF; margin-right: 0.35rem; }
 .rate-new { font-size: 0.95rem; font-weight: 700; color: var(--leaf); }
-.hotel-note { font-size: 0.76rem; color: var(--muted); margin-bottom: 1rem; }
+.hotel-note { font-size: 0.76rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.5; }
 .btn-reveal {
   width: 100%; background: none; border: 1.5px solid var(--gold);
-  color: var(--gold); font-size: 0.82rem; font-weight: 700;
+  color: var(--night); font-size: 0.82rem; font-weight: 700;
   padding: 0.55rem 1rem; cursor: pointer; transition: all 0.2s;
 }
-.btn-reveal:hover { background: var(--gold); color: var(--night); }
+.btn-reveal:hover { background: var(--gold); }
 .btn-reveal:disabled { opacity: 0.5; cursor: default; }
 .code-box {
   display: none; margin-top: 0.75rem;
-  background: rgba(45,106,79,0.08);
+  background: rgba(45,106,79,0.06);
   border: 1.5px dashed var(--leaf); padding: 0.85rem;
   text-align: center;
 }
@@ -439,9 +443,10 @@ nav {
 .hotel-contact { font-size: 0.76rem; color: var(--muted); margin-top: 0.85rem; }
 
 .portal-notice {
-  margin-top: 2rem; background: rgba(212,168,67,0.09);
+  margin-top: 2rem; background: var(--white);
+  border: 1px solid var(--line);
   border-left: 3px solid var(--gold); padding: 1rem 1.35rem;
-  font-size: 0.81rem; color: rgba(255,255,255,0.65); line-height: 1.7;
+  font-size: 0.81rem; color: var(--muted); line-height: 1.7;
 }
 
 /* ================================================
