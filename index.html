@@ -445,53 +445,6 @@ nav {
 }
 
 /* ================================================
-   SECURITY & TRANSPORT
-================================================ */
-.transport { background: var(--smoke); padding: 6rem 0; }
-.transport-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 4rem; align-items: start; margin-top: 2.5rem;
-}
-.transport-text p {
-  color: #4A5568; line-height: 1.85; margin-bottom: 1.25rem;
-}
-.includes { list-style: none; margin-bottom: 2rem; }
-.includes li {
-  display: flex; gap: 0.75rem; align-items: flex-start;
-  padding: 0.55rem 0; border-bottom: 1px solid var(--line);
-  font-size: 0.88rem; color: var(--ink);
-}
-.includes li::before { content: '✓'; color: var(--leaf); font-weight: 700; flex-shrink: 0; }
-
-.payment-card { background: var(--night); padding: 2.5rem; color: var(--white); }
-.pay-tag { font-size: 0.68rem; letter-spacing: 0.15em; color: var(--gold); font-weight: 700; margin-bottom: 0.6rem; }
-.pay-h { font-family: var(--serif); font-size: 1.45rem; margin-bottom: 0.4rem; }
-.pay-price {
-  font-family: var(--serif); font-size: 3rem;
-  font-weight: 700; color: var(--gold); line-height: 1; margin: 1.25rem 0;
-}
-.pay-price sup { font-size: 1.1rem; vertical-align: top; margin-top: 0.5rem; display: inline-block; }
-.pay-price sub { font-family: var(--sans); font-size: 0.8rem; color: rgba(255,255,255,0.45); font-weight: 400; }
-.pay-note { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-bottom: 1.75rem; line-height: 1.65; }
-
-.flw-form { display: flex; flex-direction: column; gap: 0.7rem; }
-.flw-input {
-  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14);
-  color: var(--white); padding: 0.75rem 1rem;
-  font-family: var(--sans); font-size: 0.9rem;
-  outline: none; transition: border-color 0.2s;
-}
-.flw-input:focus { border-color: var(--gold); }
-.flw-input::placeholder { color: rgba(255,255,255,0.3); }
-.btn-pay {
-  background: var(--gold); color: var(--night);
-  font-size: 0.95rem; font-weight: 700; padding: 1rem 1.5rem;
-  border: none; cursor: pointer; transition: all 0.2s; margin-top: 0.35rem;
-}
-.btn-pay:hover { background: var(--gold-pale); transform: translateY(-1px); }
-.secure-note { font-size: 0.73rem; color: rgba(255,255,255,0.38); text-align: center; margin-top: 0.75rem; }
-
-/* ================================================
    TICKETS
 ================================================ */
 .tickets { background: var(--night-mid); padding: 6rem 0; }
@@ -754,8 +707,8 @@ footer { background: var(--night-deep); padding: 4rem 0 2rem; border-top: 1px so
 <section class="hotel-portal" id="hotels">
   <div class="container">
     <div class="eyebrow eyebrow-gold">Accommodation</div>
-    <h2 class="section-h section-h-light">Curated Hotel Rates for Attendees</h2>
-    <p class="portal-desc">We've secured exclusive discounted rates with selected hotels in Umuahia for AfrICANDO 2026 attendees. Enter the ticket code from your Eventleaf confirmation email to unlock hotel rates and booking details.</p>
+    <h2 class="section-h section-h-light">Curated Hotel Rates & Guest Services</h2>
+    <p class="portal-desc">We've secured exclusive discounted rates with selected hotels in Umuahia for AfrICANDO 2026 attendees. Enter the ticket code from your Eventleaf confirmation email to unlock hotel rates, booking details, and complimentary international guest services—including airport transfers, daily shuttles, and event security escorts included directly with your stay.</p>
 
     <div class="portal-gate" id="portalGate">
       <div class="gate-head">
@@ -775,7 +728,7 @@ footer { background: var(--night-deep); padding: 4rem 0 2rem; border-top: 1px so
     <div class="hotel-results" id="hotelResults">
       <div class="verified-banner">
         <span>✅</span>
-        <span>Attendance confirmed — exclusive rates and discount codes are now visible below.</span>
+        <span>Attendance confirmed — exclusive rates, discount codes, and included security & transport details are now visible below.</span>
       </div>
       <div class="hotels-grid">
 
@@ -793,7 +746,7 @@ footer { background: var(--night-deep); padding: 4rem 0 2rem; border-top: 1px so
               <div><span class="rate-old">$XXX</span><span class="rate-new">$XXX</span></div>
             </div>
           </div>
-          <div class="hotel-note">Breakfast: [Included / Not included] · Conference shuttle: [Yes / No]</div>
+          <div class="hotel-note">Breakfast: [Included / Not included] · Security & Shuttles: Included with code (Airport transfers, venue shuttles & dedicated security escort)</div>
           <button class="btn-reveal" onclick="revealCode('code1',this)">Show Discount Code</button>
           <div class="code-box" id="code1">
             <div class="code-label">Your Exclusive Discount Code</div>
@@ -816,7 +769,7 @@ footer { background: var(--night-deep); padding: 4rem 0 2rem; border-top: 1px so
               <div><span class="rate-old">$XXX</span><span class="rate-new">$XXX</span></div>
             </div>
           </div>
-          <div class="hotel-note">Breakfast: [Included / Not included] · Pool / Gym: [Yes / No]</div>
+          <div class="hotel-note">Breakfast: [Included / Not included] · Pool / Gym: [Yes / No] · Security & Shuttles: Included with code (Airport transfers, venue shuttles & dedicated security escort)</div>
           <button class="btn-reveal" onclick="revealCode('code2',this)">Show Discount Code</button>
           <div class="code-box" id="code2">
             <div class="code-label">Your Exclusive Discount Code</div>
@@ -839,7 +792,7 @@ footer { background: var(--night-deep); padding: 4rem 0 2rem; border-top: 1px so
               <div><span class="rate-old">$XXX</span><span class="rate-new">$XXX</span></div>
             </div>
           </div>
-          <div class="hotel-note">Breakfast: [Included / Not included] · Airport shuttle: [Yes / No]</div>
+          <div class="hotel-note">Breakfast: [Included / Not included] · Security & Shuttles: Included with code (Airport transfers from Enugu/Port Harcourt, venue shuttles & dedicated security escort)</div>
           <button class="btn-reveal" onclick="revealCode('code3',this)">Show Discount Code</button>
           <div class="code-box" id="code3">
             <div class="code-label">Your Exclusive Discount Code</div>
@@ -850,45 +803,7 @@ footer { background: var(--night-deep); padding: 4rem 0 2rem; border-top: 1px so
 
       </div>
       <div class="portal-notice">
-        <strong style="color:var(--gold);">Important:</strong> Present your discount code when booking directly with the hotel and mention AfrICANDO 2026. Rates are valid for November 15–21, 2026. Availability is limited — secure your room early.
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== SECURITY & TRANSPORT ====== -->
-<section class="transport" id="transport">
-  <div class="container">
-    <div class="eyebrow">International Guest Services</div>
-    <h2 class="section-h">Security &amp; Transportation Package</h2>
-    <div class="transport-grid">
-      <div class="transport-text">
-        <p>For international delegates arriving in Abia State, the event organizers have arranged a dedicated security and transportation package. This covers your entire stay — from airport arrival to daily venue transfers — so you can focus entirely on the conference.</p>
-        <p>Both Port Harcourt International Airport and Akanu Ibiam International Airport (Enugu) are serviced. All transfers are handled by vetted, event-designated logistics providers coordinated directly by the conference team.</p>
-        <ul class="includes">
-          <li>Airport pickup from Port Harcourt or Enugu Airport (with name-board greeting)</li>
-          <li>Daily hotel-to-venue-to-hotel shuttle (all three conference days)</li>
-          <li>Dedicated security escort throughout the conference period</li>
-          <li>Airport drop-off on departure day</li>
-          <li>24/7 emergency contact line for international guests</li>
-          <li>Optional: Nov 20 sightseeing excursion shuttle across Abia State</li>
-        </ul>
-        <p style="font-size:0.84rem;color:#6B7280;">Payment for this package is collected separately from your conference registration and hotel booking. Your payment receipt and transport itinerary will be emailed immediately upon checkout.</p>
-      </div>
-      <div class="payment-card">
-        <div class="pay-tag">Book Your Package</div>
-        <div class="pay-h">International Guest Security &amp; Transport</div>
-        <div class="pay-price"><sup>$</sup>[XXX]<sub>&nbsp;/person</sub></div>
-        <div class="pay-note">Covers all airport transfers, daily conference shuttles, and security escort for the full event period (Nov 15–20, 2026).</div>
-        <div class="flw-form">
-          <input class="flw-input" type="text" id="flw-name" placeholder="Full name (as on passport)">
-          <input class="flw-input" type="email" id="flw-email" placeholder="Email address">
-          <input class="flw-input" type="text" id="flw-ref" placeholder="Eventleaf confirmation number">
-          <input class="flw-input" type="text" id="flw-airport" placeholder="Arrival airport (Port Harcourt / Enugu)">
-          <input class="flw-input" type="text" id="flw-arrival" placeholder="Arrival date & flight number">
-          <button class="btn-pay" onclick="payTransport()">Pay Securely via Flutterwave</button>
-        </div>
-        <div class="secure-note">🔒 Secured by Flutterwave &nbsp;·&nbsp; USD &amp; NGN accepted &nbsp;·&nbsp; Card, transfer &amp; USSD</div>
+        <strong style="color:var(--gold);">Important:</strong> Present your discount code when booking directly with the hotel and mention AfrICANDO 2026. Booking with this code automatically includes airport pickups (Port Harcourt or Enugu), daily conference shuttles, and event security escorts at no extra fee. Rates are valid for November 15–21, 2026. Availability is limited — secure your room early.
       </div>
     </div>
   </div>
@@ -1193,57 +1108,6 @@ function revealCode(id, btn) {
   document.getElementById(id).classList.add('show');
   btn.textContent = 'Code Revealed ✓';
   btn.disabled = true;
-}
-
-/* ---- FLUTTERWAVE PAYMENT ---- */
-function payTransport() {
-  var name    = document.getElementById('flw-name').value.trim();
-  var email   = document.getElementById('flw-email').value.trim();
-  var ref     = document.getElementById('flw-ref').value.trim();
-  var airport = document.getElementById('flw-airport').value.trim();
-  var arrival = document.getElementById('flw-arrival').value.trim();
-
-  if (!name || !email || !ref || !airport || !arrival) {
-    alert('Please complete all fields before proceeding to payment.'); return;
-  }
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    alert('Please enter a valid email address.'); return;
-  }
-
-  FlutterwaveCheckout({
-    // PUBLIC key — safe in client-side code (Flutterwave/Stripe pattern).
-    // Do NOT put your SECRET key here. Replace the placeholder below with your real public key.
-    public_key: "FLWPUBK-XXXXXXXXXXXXXXXXXXXXXXXXXX-X",
-    tx_ref: "africando-transport-" + Date.now(),
-    amount: 150, // ← confirm final USD price with client before launch
-    currency: "USD",
-    payment_options: "card, ussd, banktransfer",
-    customer: {
-      email: email,
-      name: name,
-      phone_number: ""
-    },
-    meta: {
-      eventleaf_confirmation: ref,
-      arrival_airport: airport,
-      arrival_details: arrival
-    },
-    customizations: {
-      title: "AfrICANDO 2026",
-      description: "International Guest Security & Transportation Package",
-      logo: "https://eventleafmedia.blob.core.windows.net/c40615/74502/c63b2ece-a762-4be1-a968-8290784a1bd6.png"
-    },
-    callback: function(data) {
-      if (data.status === "successful" || data.status === "completed") {
-        // ── TODO before launch: verify this transaction server-side using your SECRET key:
-        // GET https://api.flutterwave.com/v3/transactions/{data.transaction_id}/verify
-        // (Authorization: Bearer YOUR_SECRET_KEY — this call must happen on your server, never here)
-        alert("Payment confirmed! A receipt and your transport itinerary have been sent to " + email + ". Welcome to AfrICANDO 2026.");
-        document.querySelectorAll('.flw-input').forEach(function(i){ i.value = ''; });
-      }
-    },
-    onclose: function() {}
-  });
 }
 </script>
 
